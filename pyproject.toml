@@ -1,0 +1,16 @@
+[project]
+name = "discord-stats"
+version = "0.1.0"
+description = "Some engagement statistics derived from the message history of the publicly accessible channels."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "discord-py>=2.6.4",
+    "pandas>=2.3.3",
+    "plotly>=6.3.1",
+    "streamlit>=1.51.0",
+    "wordcloud>=1.9.4",
+]
+
+[dependency-groups]
+dev = []

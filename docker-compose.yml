@@ -1,0 +1,17 @@
+services:
+  app:
+    image: discord-stats:latest
+    build:
+      context: .
+    environment:
+      - DATA_FILE=${DATA_FILE:-static/kolab_messages.csv}
+      - DISCORD_TOKEN
+    working_dir: /app
+    command: ["uv", "run", "streamlit", "run", "--browser.gatherUsageStats", "false", "--server.address", "0.0.0.0", "--server.port", "8000", "./report.py"]
+    ports:
+      - "8000:8000"
+    volumes:
+      - data:/app/static
+
+volumes:
+  data:
