@@ -1,6 +1,6 @@
 services:
   app:
-    image: discord-stats:latest
+    image: ghcr.io/ko-lab/discord-stats:latest
     build:
       context: .
     environment:
