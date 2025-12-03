@@ -9,7 +9,7 @@ services:
     working_dir: /app
     command: ["uv", "run", "streamlit", "run", "--browser.gatherUsageStats", "false", "--server.address", "0.0.0.0", "--server.port", "8000", "./report.py"]
     ports:
-      - "8000:8000"
+      - "127.0.0.1:8000:8000"
     volumes:
       - data:/app/static
 
